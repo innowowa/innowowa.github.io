@@ -6,7 +6,7 @@ $(document).ready(function (datasource) {
     
     $('#CSV').on('change keyup paste click', function() {
     indicator = $('#CSV').val();
-    datasource = "https://cors-anywhere.herokuapp.com/https://go.votomobile.org/share/a/reports/bb6006d83645c7d9eb32ace3a4d23b413024ba20";
+    datasource = "https://cors-anywhere.herokuapp.com/http://41.87.7.147:3000/api/facilities/download?data={%22where%22:{},%22format%22:%22excel%22}";
     tableau.connectionData = datasource;
     });
     
@@ -95,7 +95,7 @@ $(document).ready(function (datasource) {
     $(document).ready(function () {
         $("#submitButton").click(function () {
             indicator = $('#CSV').val();
-            datasource = "https://cors-anywhere.herokuapp.com/https://go.votomobile.org/share/a/reports/bb6006d83645c7d9eb32ace3a4d23b413024ba20";
+            datasource = "https://cors-anywhere.herokuapp.com/https://http://41.87.7.147:3000/api/facilities/download?data={%22where%22:{},%22format%22:%22excel%22}";
             tableau.connectionData = datasource;
             tableau.connectionName = "OHSP Data";
             tableau.connectionData = datasource;
