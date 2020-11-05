@@ -95,7 +95,7 @@ $(document).ready(function (datasource) {
     $(document).ready(function () {
         $("#submitButton").click(function () {
             indicator = $('#CSV').val();
-            datasource = "https://cors-anywhere.herokuapp.com/https://http://41.87.7.147:3000/api/facilities/download?data={%22where%22:{},%22format%22:%22excel%22}";
+            datasource = "https://cors-anywhere.herokuapp.com//http://41.87.7.147:3000/api/facilities/download?data={%22where%22:{},%22format%22:%22excel%22}";
             tableau.connectionData = datasource;
             tableau.connectionName = "OHSP Data";
             tableau.connectionData = datasource;
