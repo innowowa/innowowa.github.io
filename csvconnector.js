@@ -1,7 +1,7 @@
 $(document).ready(function (datasource) {
 
     var indicator = $('#CSV').val();
-    var datasource = "https://cors-anywhere.herokuapp.com/https://go.votomobile.org/share/a/reports/bb6006d83645c7d9eb32ace3a4d23b413024ba20";
+    var datasource = "https://cors-anywhere.herokuapp.com/http://41.87.7.147:3000/api/facilities/download?data={%22where%22:{},%22format%22:%22excel%22}";
     var myConnector = tableau.makeConnector();
     
     $('#CSV').on('change keyup paste click', function() {
