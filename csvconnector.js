@@ -91,7 +91,6 @@ $(document).ready(function (datasource) {
     };
 
     tableau.registerConnector(myConnector);
-
     $(document).ready(function () {
         $("#submitButton").click(function () {
             indicator = $('#CSV').val();
