@@ -1,12 +1,12 @@
 $(document).ready(function (datasource) {
 
     var indicator = $('#CSV').val();
-    var datasource = "https://cors-anywhere.herokuapp.com/http://41.87.7.147:3000/api/facilities/download?data={%22where%22:{},%22format%22:%22excel%22}";
+    var datasource = "http://41.87.7.147:3000/api/facilities/download?data={%22where%22:{},%22format%22:%22excel%22}";
     var myConnector = tableau.makeConnector();
     
     $('#CSV').on('change keyup paste click', function() {
     indicator = $('#CSV').val();
-    datasource = "https://cors-anywhere.herokuapp.com/http://41.87.7.147:3000/api/facilities/download?data={%22where%22:{},%22format%22:%22excel%22}";
+    datasource = "http://41.87.7.147:3000/api/facilities/download?data={%22where%22:{},%22format%22:%22excel%22}";
     tableau.connectionData = datasource;
     });
     
@@ -41,8 +41,8 @@ $(document).ready(function (datasource) {
             }
             console.log(cols);
             var tableInfo = {
-                id: "OHSPData",
-                alias: "OHSPData",
+                id: "CSVData",
+                alias: "CSVData",
                 columns: cols
             };
 
@@ -94,9 +94,9 @@ $(document).ready(function (datasource) {
     $(document).ready(function () {
         $("#submitButton").click(function () {
             indicator = $('#CSV').val();
-            datasource = "https://cors-anywhere.herokuapp.com//http://41.87.7.147:3000/api/facilities/download?data={%22where%22:{},%22format%22:%22excel%22}";
+            datasource = "http://41.87.7.147:3000/api/facilities/download?data={%22where%22:{},%22format%22:%22excel%22}";
             tableau.connectionData = datasource;
-            tableau.connectionName = "OHSP Data";
+            tableau.connectionName = "CSV Data";
             tableau.connectionData = datasource;
             tableau.submit();
         });
