@@ -1,9 +1,13 @@
 $(document).ready(function (datasource) {
-    
-    var datasource = "https://go.votomobile.org/share/a/reports/bb6006d83645c7d9eb32ace3a4d23b413024ba20";
+
+    var indicator = $('#CSV').val();
+    var datasource = "/https://go.votomobile.org/share/a/reports/bb6006d83645c7d9eb32ace3a4d23b413024ba20";
     var myConnector = tableau.makeConnector();
     
     $('#CSV').on('change keyup paste click', function() {
+    
+    indicator = $('#CSV').val();
+    datasource = "https://go.votomobile.org/share/a/reports/bb6006d83645c7d9eb32ace3a4d23b413024ba20";
     tableau.connectionData = datasource;
     });
     
@@ -13,12 +17,7 @@ $(document).ready(function (datasource) {
         
         $.ajax({
             url: source,
-            headers: {
-                "accept": "application/json",
-                "Access-Control-Allow-Origin": "*",
-                "Access-Control-Allow-Credentials": true},
-            crossDomain: true,
-            dataType: "txt"
+            dataType: "text/plain"
         }).done(successFunction);
 
         function successFunction(data) {
@@ -43,8 +42,8 @@ $(document).ready(function (datasource) {
             }
             console.log(cols);
             var tableInfo = {
-                id: "CSVData",
-                alias: "CSVData",
+                id: "OHSPData",
+                alias: "OHSPData",
                 columns: cols
             };
 
@@ -93,13 +92,13 @@ $(document).ready(function (datasource) {
     };
 
     tableau.registerConnector(myConnector);
+
     $(document).ready(function () {
         $("#submitButton").click(function () {
-            //indicator = $('#CSV').val();
-            var datasource = datasource;
-            //datasource = "https://go.votomobile.org/share/a/reports/bb6006d83645c7d9eb32ace3a4d23b413024ba20";
+            indicator = $('#CSV').val();
+            datasource = "https://go.votomobile.org/share/a/reports/bb6006d83645c7d9eb32ace3a4d23b413024ba20";
             tableau.connectionData = datasource;
-            tableau.connectionName = "CSV Data";
+            tableau.connectionName = "OHSP Data";
             tableau.connectionData = datasource;
             tableau.submit();
         });
