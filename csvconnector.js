@@ -1,20 +1,14 @@
 $(document).ready(function (datasource) {
 
-    var indicator = $('#CSV').val();
-    var datasource = "/https://go.votomobile.org/share/a/reports/bb6006d83645c7d9eb32ace3a4d23b413024ba20";
     var myConnector = tableau.makeConnector();
-    
-    $('#CSV').on('change keyup paste click', function() {
-    
-    indicator = $('#CSV').val();
-    datasource = "https://go.votomobile.org/share/a/reports/bb6006d83645c7d9eb32ace3a4d23b413024ba20";
-    tableau.connectionData = datasource;
+    $('#link').on('change keyup paste click', function() {
+        var datasource = $('#link').val();
+        tableau.connectionData = datasource;
     });
     
     myConnector.getSchema = function (schemaCallback) {
 
         var source = tableau.connectionData;
-        
         $.ajax({
             url: source,
             dataType: "text/plain"
@@ -42,8 +36,8 @@ $(document).ready(function (datasource) {
             }
             console.log(cols);
             var tableInfo = {
-                id: "OHSPData",
-                alias: "OHSPData",
+                id: "Data",
+                alias: "Data",
                 columns: cols
             };
 
@@ -52,8 +46,6 @@ $(document).ready(function (datasource) {
     };
 
     myConnector.getData = function (table, doneCallback) {
-
-        
         var source = tableau.connectionData;
         
         $.ajax({
@@ -95,8 +87,7 @@ $(document).ready(function (datasource) {
 
     $(document).ready(function () {
         $("#submitButton").click(function () {
-            indicator = $('#CSV').val();
-            datasource = "https://go.votomobile.org/share/a/reports/bb6006d83645c7d9eb32ace3a4d23b413024ba20";
+            datasource = $('#link').val();
             tableau.connectionData = datasource;
             tableau.connectionName = "OHSP Data";
             tableau.connectionData = datasource;
