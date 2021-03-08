@@ -2,7 +2,7 @@ $(document).ready(function (datasource) {
 
     var myConnector = tableau.makeConnector();
     $('#link').on('change keyup paste click', function() {
-        var datasource = $('#link').val();
+        var datasource = "https://cors-anywhere.herokuapp.com/" + $('#link').val();
         tableau.connectionData = datasource;
     });
     
@@ -87,7 +87,7 @@ $(document).ready(function (datasource) {
 
     $(document).ready(function () {
         $("#submitButton").click(function () {
-            datasource = $('#link').val();
+            datasource = "https://cors-anywhere.herokuapp.com/" + $('#link').val();
             tableau.connectionData = datasource;
             tableau.connectionName = "OHSP Data";
             tableau.connectionData = datasource;
