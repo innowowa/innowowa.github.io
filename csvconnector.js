@@ -6,7 +6,7 @@ $(document).ready(function (datasource) {
     
     $('#CSV').on('change keyup paste click', function() {
     indicator = $('#CSV').val();
-    datasource = "https://go.votomobile.org/share/a/reports/bb6006d83645c7d9eb32ace3a4d23b413024ba20";
+    //datasource = "https://go.votomobile.org/share/a/reports/bb6006d83645c7d9eb32ace3a4d23b413024ba20";
     tableau.connectionData = datasource;
     });
     
@@ -100,7 +100,7 @@ $(document).ready(function (datasource) {
     $(document).ready(function () {
         $("#submitButton").click(function () {
             indicator = $('#CSV').val();
-            datasource = "https://go.votomobile.org/share/a/reports/bb6006d83645c7d9eb32ace3a4d23b413024ba20";
+            //datasource = "https://go.votomobile.org/share/a/reports/bb6006d83645c7d9eb32ace3a4d23b413024ba20";
             tableau.connectionData = datasource;
             tableau.connectionName = "CSV Data";
             tableau.connectionData = datasource;
