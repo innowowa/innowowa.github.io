@@ -3,8 +3,8 @@ $(document).ready(function (datasource) {
     var datasource = "https://cors-anywhere.herokuapp.com/https://ohsp.health.gov.mw/api/29/analytics/events/query/uYjxkTbwRNf.csv?dimension=pe:THIS_YEAR&dimension=ou:lZsCb6y0KDX&dimension=dDHkBd3X8Ce.MABBsj6O2Un&dimension=dDHkBd3X8Ce.ENRjVGxVL6l&dimension=dDHkBd3X8Ce.NI0QRzJvQ0k&dimension=dDHkBd3X8Ce.Xhdn49gUd52&dimension=dDHkBd3X8Ce.ovY6E8BSdto&dimension=dDHkBd3X8Ce.HAZ7VQ730yn&stage=dDHkBd3X8Ce&displayProperty=NAME&tableLayout=true&columns=pe;ou;MABBsj6O2Un;ENRjVGxVL6l;oindugucx72;NI0QRzJvQ0k;Xhdn49gUd52;ovY6E8BSdto;HAZ7VQ730yn&rows=pe;ou;MABBsj6O2Un;ENRjVGxVL6l;oindugucx72;NI0QRzJvQ0k;Xhdn49gUd52;ovY6E8BSdto;HAZ7VQ730yn";
     var myConnector = tableau.makeConnector();
 
-    var username = "danielmapemba";
-    var password = "Covtest@20";
+    var username = "";
+    var password = "";
     
     $('#CSV').on('change keyup paste click', function() {
     indicator = $('#CSV').val();
