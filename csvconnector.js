@@ -16,7 +16,9 @@ $(document).ready(function (datasource) {
         
         $.ajax({
             url: source,
-            headers: {'Access-Control-Allow-Origin': '*' },
+            headers: {
+                "accept": "application/json",
+                'Access-Control-Allow-Origin': '*' },
             crossDomain: true,
             dataType: "text"
         }).done(successFunction);
