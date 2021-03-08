@@ -1,7 +1,7 @@
 $(document).ready(function (datasource) {
 
     var indicator = $('#CSV').val();
-    var datasource = "https://go.votomobile.org/share/a/reports/bb6006d83645c7d9eb32ace3a4d23b413024ba20";
+    var datasource = $('#link').val();
     var myConnector = tableau.makeConnector();
     
     $('#CSV').on('change keyup paste click', function() {
