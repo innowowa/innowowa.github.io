@@ -16,6 +16,7 @@ $(document).ready(function (datasource) {
         
         $.ajax({
             url: source,
+            headers: {'Access-Control-Allow-Origin': 'http://The web site allowed to access' },
             dataType: "text"
         }).done(successFunction);
 
