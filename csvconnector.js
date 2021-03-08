@@ -18,7 +18,8 @@ $(document).ready(function (datasource) {
             url: source,
             headers: {
                 "accept": "application/json",
-                'Access-Control-Allow-Origin': '*' },
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Credentials': true},
             crossDomain: true,
             dataType: "text"
         }).done(successFunction);
