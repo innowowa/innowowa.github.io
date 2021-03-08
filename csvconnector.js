@@ -21,6 +21,7 @@ $(document).ready(function (datasource) {
                 "Access-Control-Allow-Origin": "*",
                 "Access-Control-Allow-Credentials": true},
             crossDomain: true,
+            xhrFields: {withCredentials: true},
             dataType: "text"
         }).done(successFunction);
 
